@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<UseWPF>true</UseWPF>
+		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DefineConstants>;REPORTING;DASHBOARD;PDF;OFI_BASIC;OFI_COMPLETE;WIN_CHARTMAPPIVOT;WPF_CHARTMAPPIVOT;</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(DefineConstants.Contains(PDF))'">
+		<PackageReference Include="DevExpress.Document.Processor" Version="24.2.*-*" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(DefineConstants.Contains(REPORTING))'">
+		<PackageReference Include="DevExpress.Blazor" Version="24.2.*-*" />
+		<PackageReference Include="DevExpress.AspNetCore.Reporting" Version="24.2.*-*" />
+		<PackageReference Include="DevExpress.Blazor.Reporting.Viewer" Version="24.2.*-*" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(DefineConstants.Contains(DASHBOARD))'">
+		<PackageReference Include="DevExpress.Blazor" Version="24.2.*-*" />
+		<PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="24.2.*-*" />
+		<PackageReference Include="DevExpress.Win.Dashboard" Version="24.2.*-*" />
+		<PackageReference Include="DevExpress.Wpf.Dashboard" Version="24.2.*-*" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(DefineConstants.Contains(OFI_BASIC))'">
+		<PackageReference Include="DevExpress.RichEdit.Core" Version="24.2.*-*" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(DefineConstants.Contains(OFI_COMPLETE))'">
+		<PackageReference Include="DevExpress.Document.Processor" Version="24.2.*-*" />
+	</ItemGroup>
+
+
+	<ItemGroup Condition="'$(DefineConstants.Contains(WIN_CHARTMAPPIVOT))'">
+		<PackageReference Include="DevExpress.Win.Charts" Version="24.2.*-*" />
+		<PackageReference Include="DevExpress.Win.Map" Version="24.2.*-*" />
+		<PackageReference Include="DevExpress.Win.PivotGrid" Version="24.2.*-*" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(DefineConstants.Contains(WPF_CHARTMAPPIVOT))'">
+		<PackageReference Include="DevExpress.Wpf.Charts" Version="24.2.*-*" />
+		<PackageReference Include="DevExpress.Wpf.Map" Version="24.2.*-*" />
+		<PackageReference Include="DevExpress.Wpf.PivotGrid" Version="24.2.*-*" />
+	</ItemGroup>
+
+
+
+</Project>
