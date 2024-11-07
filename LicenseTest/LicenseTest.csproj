@@ -11,7 +11,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<DefineConstants>;REPORTING;DASHBOARD;PDF;OFI_BASIC;OFI_COMPLETE;WIN_CHARTMAPPIVOT;WPF_CHARTMAPPIVOT;</DefineConstants>
+		<DefineConstants> ;REPORTING;DASHBOARD;PDF;OFI_BASIC;OFI_COMPLETE;WIN_CHARTMAPPIVOT;WPF_CHARTMAPPIVOT;</DefineConstants>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(DefineConstants.Contains(PDF))'">

@@ -17,8 +17,6 @@ public class Dummy3()
         var converter = new PdfDocumentConverter("");
         converter.SaveDocument("");
 
-        double result = Units.Area.Convert(100.0f, Area.Hectare, Area.SquareMeter);
-
     }
 }
 #endif
